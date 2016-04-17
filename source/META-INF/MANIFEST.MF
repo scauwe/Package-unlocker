@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Localization: plugin
+Bundle-Name: %local.package.name
+Bundle-SymbolicName: info.vancauwenberge.idm;singleton:=true
+Bundle-Version: 1.0.1.qualifier
+Bundle-Vendor: %local.package.provider
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Require-Bundle: com.novell.core,
+ com.novell.designer.model,
+ com.novell.idm,
+ org.eclipse.ui,
+ org.eclipse.ui.forms,
+ org.eclipse.emf,
+ org.eclipse.emf.ecore,
+ org.eclipse.core.runtime
+Export-Package: info.vancauwenberge.idm
+

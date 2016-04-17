@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension point="org.eclipse.ui.popupMenus">
+		<objectContribution
+			objectClass="com.novell.idm.model.impl.IdmPackageImpl"
+            id="com.novell.idm.impl.IdmPackageAdd">
+
+			<visibility>
+				<and>
+					<not>
+						<objectState
+							name="package_option"
+							value="package_created_local" />
+					</not>
+					<objectState
+						name="package_option"
+						value="allow_create_package" />
+				</and>
+			</visibility>
+
+         	 <action
+               label="%local.action.markLocal"
+               class="info.vancauwenberge.idm.action.MarkLocalAction"
+               tooltip="%local.action.markLocal.toolTip"
+               menubarPath="packageGroupSlot1"
+               enablesFor="1"
+               id="info.vancauwenberge.idm.action.MarkLocalAction">
+         	</action>
+      	</objectContribution>
+	</extension>
+	<extension point="org.eclipse.ui.popupMenus">
+		<objectContribution
+			objectClass="com.novell.idm.model.impl.IdmPackageImpl"
+            id="com.novell.idm.impl.IdmPackageAdd">
+
+         	 <action
+               label="%local.action.getChangeLog"
+               class="info.vancauwenberge.idm.action.GetPackageChangeLogAction"
+               tooltip="%local.action.getChangeLog.toolTip"
+               menubarPath="properties"
+               enablesFor="1"
+               id="info.vancauwenberge.idm.action.GetPackageChangeLogAction">
+         	</action>
+      	</objectContribution>
+	</extension>
+
+</plugin>
